@@ -20,6 +20,20 @@ const images = [
   './img/05.webp',
 ]
 
+// AUTOPLAY //
+let c = 0;
+let myAutoPlay = setInterval(autoPlay, 3000);
+
+function autoPlay() {
+  itemsCollection[c].classList.add('hide');
+  c++;
+
+  if(c > images.length - 1){
+    c = 0;
+  }
+
+  itemsCollection[c].classList.remove('hide');
+}
 
 // creo un ciclo dell'array delle immagini e ad ogni ciclo aggiungo il tag con l'immagine ciclata 
 
@@ -73,6 +87,7 @@ itemsCollection[counterImg].classList.remove('hide');
     bottomChev.classList.add('hide')
   }
 })
+
 
 
 
